@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE tiles-definitions PUBLIC  
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="DefaultTemplate" template="/pages/layout.jsp">
+		<put-attribute name="header" value="/pages/header.jsp" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/pages/footer.jsp" />
+	</definition>
+
+   <definition name="AdminTemplate" template="/pages/layout.jsp">
+		<put-attribute name="header" value="/pages/adminheader.jsp" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/pages/layout.jsp" />
+	</definition>
+
+
+
+<definition name="clientproduct" extends="AdminTemplate">
+		<put-attribute name="title" expression="DigitalMenu" />
+		<put-attribute name="metakey" value="" />
+		<put-attribute name="metadesc" value="" />
+		<put-attribute name="body" value="/pages/clientproduct.jsp" />
+	</definition>
+
+</tiles-definitions>
